@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AspOnLinux.Models;
+using AspOnLinux.Helpers;
 
 namespace AspOnLinux.Controllers
 {
@@ -26,7 +27,9 @@ namespace AspOnLinux.Controllers
         {
             ViewData["Message"] = "Your contact page.";
 
-            return View();
+            string output = "ls".Bash();
+
+            return View(output);
         }
 
         public IActionResult Privacy()

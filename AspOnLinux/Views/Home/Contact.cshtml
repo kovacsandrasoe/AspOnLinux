@@ -1,5 +1,8 @@
-﻿@{
+﻿@model string
+
+@{
     ViewData["Title"] = "Contact";
+
 }
 <h2>@ViewData["Title"]</h2>
 <h3>@ViewData["Message"]</h3>
@@ -10,6 +13,10 @@
     <abbr title="Phone">P:</abbr>
     425.555.0100
 </address>
+
+<h5>
+    @Model
+</h5>
 
 <address>
     <strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br />
