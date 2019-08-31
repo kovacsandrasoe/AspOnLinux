@@ -29,7 +29,7 @@ namespace AspOnLinux.Controllers
 
             string output = "ls".Bash();
 
-            return View(output);
+            return View("Contact",output);
         }
 
         public IActionResult Privacy()
