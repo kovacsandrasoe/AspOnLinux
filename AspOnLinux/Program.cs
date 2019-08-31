@@ -20,14 +20,14 @@ namespace AspOnLinux
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()
-                .UseKestrel(options =>
-                {
-                    options.Listen(IPAddress.Loopback, 80);
-                    //options.Listen(IPAddress.Loopback, 443, listenOptions =>
-                    //{
-                    //    listenOptions.UseHttps("testCert.pfx", "testPassword");
-                    //});
-                });
+                .UseStartup<Startup>();
+                //.UseKestrel(options =>
+                //{
+                //    options.Listen(IPAddress.Loopback, 80);
+                //    //options.Listen(IPAddress.Loopback, 443, listenOptions =>
+                //    //{
+                //    //    listenOptions.UseHttps("testCert.pfx", "testPassword");
+                //    //});
+                //});
     }
 }
